@@ -10,7 +10,7 @@ class ProgressBar:
 
     def update(self, val, message = ''):
         percent = val / self.width
-        sys.stdout.write('\r[{0}{1}] {2}% :: {3}  '.format(self.filled * int(percent * 50), self.unfilled * (50 -  int(percent * 50)) , int(percent * 100), message))
+        sys.stdout.write('\r[{0}{1}] {2}% :: {3}           '.format(self.filled * int(percent * 50), self.unfilled * (50 -  int(percent * 50)) , int(percent * 100), message))
         if val >= self.max:
             print("\n -- Finished --")
 
